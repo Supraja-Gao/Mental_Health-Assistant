@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlmodel
+mysql-connector-python
+passlib[bcrypt]
+python-multipart
+transformers
+scikit-learn
+pandas
+jinja2
