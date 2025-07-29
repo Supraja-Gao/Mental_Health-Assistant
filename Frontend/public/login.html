@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindfulAI - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="../../assets/favicon.ico">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-poppins transition-colors duration-300">
+  <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-2xl font-semibold text-blue-500 dark:text-blue-400">MindfulAI</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="hover:text-blue-500"></a>
+         
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="max-w-md mx-auto px-4 py-12">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold text-center mb-6">Login</h2>
+      <form id="auth-form">
+        <div class="mb-4">
+          <label for="username" class="block text-sm font-medium">Username</label>
+          <input type="username" id="username" class="w-full p-2 mt-1 rounded border dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <p id="username-error" class="text-red-500 text-sm hidden">Invalid Username</p>
+        </div>
+        <div class="mb-4">
+          <label for="password" class="block text-sm font-medium">Password</label>
+          <input type="password" id="password" class="w-full p-2 mt-1 rounded border dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+          <p id="password-error" class="text-red-500 text-sm hidden">Password must be at least 6 characters</p>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition">Submit</button>
+      </form>
+    </div>
+  </section>
+  <br>
+  <div class="mb-4 text-center">
+    <button id="forgot-password-btn" class="text-sm text-blue-500 hover:underline focus:outline-none">Forgot Password?</button>
+  </div>
+  <br>
+  <div class="mt-4 text-center">
+    <p class="text-sm">New User? 
+      <button id="signup-btn" class="text-blue-500 hover:underline focus:outline-none">Create an Account</button>
+    </p>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/login.js" defer></script>
+</body>
+</html>

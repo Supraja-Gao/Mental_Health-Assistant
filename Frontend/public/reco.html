@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindfulAI - Recommendations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="../../assets/favicon.ico">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-poppins transition-colors duration-300">
+  <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-2xl font-semibold text-blue-500 dark:text-blue-400">MindfulAI</a>
+        </div>
+        <div class="flex items-center space-x-4 nav-links">
+          <a href="index.html" class="hover:text-blue-500">Home</a>
+          <a href="diary.html" class="hover:text-blue-500">Diary</a>
+          <a href="chatbot.html" class="hover:text-blue-500">Chatbot</a>
+          <a href="quiz.html" class="hover:text-blue-500">Quiz</a>
+          <a href="reco.html" class="hover:text-blue-500">Recommendations</a>
+          
+         
+          
+        </div>
+        <div class="hamburger md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-semibold text-center mb-8">Personalized Recommendations</h2>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card">
+      <div id="recommendations-list"></div>
+    </div>
+  </section>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/reco.js" defer></script>
+</body>
+</html>

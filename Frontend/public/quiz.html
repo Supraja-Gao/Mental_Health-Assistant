@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindfulAI - Personality Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-poppins transition-colors duration-300">
+  <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-2xl font-semibold text-blue-500 dark:text-blue-400">MindfulAI</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="hover:text-blue-500">Home</a>
+          <a href="diary.html" class="hover:text-blue-500">Diary</a>
+          <a href="chatbot.html" class="hover:text-blue-500">Chatbot</a>
+          <a href="quiz.html" class="hover:text-blue-500">Quiz</a>
+          <a href="reco.html" class="hover:text-blue-500">Recommendations</a>
+         
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold text-center mb-6">Big Five Personality Quiz</h2>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+      <form id="quiz-form">
+        <div id="quiz-questions">
+        
+<div class="question">
+  <label><b>1. I feel full of energy.</b></label><br>
+  <input type="radio" name="q1_openness" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q1_openness" value="2"> Disagree<br>
+  <input type="radio" name="q1_openness" value="3"> Neutral<br>
+  <input type="radio" name="q1_openness" value="4"> Agree<br>
+  <input type="radio" name="q1_openness" value="5"> Strongly Agree<br>
+</div>
+<br>
+<!-- Conscientiousness -->
+<div class="question">
+  <label><b>2. I have difficulty understanding abstract ideas. </b></label><br>
+  <input type="radio" name="q2_conscientiousness" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q2_conscientiousness" value="2"> Disagree<br>
+  <input type="radio" name="q2_conscientiousness" value="3"> Neutral<br>
+  <input type="radio" name="q2_conscientiousness" value="4"> Agree<br>
+  <input type="radio" name="q2_conscientiousness" value="5"> Strongly Agree<br>
+</div>
+<br>
+<div class="question">
+  <label><b>3. I make a mess of things. </b></label><br>
+  <input type="radio" name="q3_conscientiousness" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q3_conscientiousness" value="2"> Disagree<br>
+  <input type="radio" name="q3_conscientiousness" value="3"> Neutral<br>
+  <input type="radio" name="q3_conscientiousness" value="4"> Agree<br>
+  <input type="radio" name="q3_conscientiousness" value="5"> Strongly Agree<br>
+</div>
+<br>
+<!-- Extraversion -->
+<div class="question">
+  <label><b>4. I often forget to put things back in their proper place.</b></label><br>
+  <input type="radio" name="q4_extraversion" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q4_extraversion" value="2"> Disagree<br>
+  <input type="radio" name="q4_extraversion" value="3"> Neutral<br>
+  <input type="radio" name="q4_extraversion" value="4"> Agree<br>
+  <input type="radio" name="q4_extraversion" value="5"> Strongly Agree<br>
+</div>
+<br>
+
+<div class="question">
+  <label><b>5. I am comfortable around people. </b></label><br>
+  <input type="radio" name="q5_extraversion" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q5_extraversion" value="2"> Disagree<br>
+  <input type="radio" name="q5_extraversion" value="3"> Neutral<br>
+  <input type="radio" name="q5_extraversion" value="4"> Agree<br>
+  <input type="radio" name="q5_extraversion" value="5"> Strongly Agree<br>
+</div>
+<br>
+<!-- Agreeableness -->
+<div class="question">
+  <label><b>6. I am quiet around strangers. </b></label><br>
+  <input type="radio" name="q6_agreeableness" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q6_agreeableness" value="2"> Disagree<br>
+  <input type="radio" name="q6_agreeableness" value="3"> Neutral<br>
+  <input type="radio" name="q6_agreeableness" value="4"> Agree<br>
+  <input type="radio" name="q6_agreeableness" value="5"> Strongly Agree<br>
+</div>
+<br>
+<div class="question">
+  <label><b>7. I insult people. </b></label><br>
+  <input type="radio" name="q7_agreeableness" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q7_agreeableness" value="2"> Disagree<br>
+  <input type="radio" name="q7_agreeableness" value="3"> Neutral<br>
+  <input type="radio" name="q7_agreeableness" value="4"> Agree<br>
+  <input type="radio" name="q7_agreeableness" value="5"> Strongly Agree<br>
+</div>
+<br>
+<!-- Neuroticism -->
+<div class="question">
+  <label><b>8. I have a soft heart. </b></label><br>
+  <input type="radio" name="q8_neuroticism" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q8_neuroticism" value="2"> Disagree<br>
+  <input type="radio" name="q8_neuroticism" value="3"> Neutral<br>
+  <input type="radio" name="q8_neuroticism" value="4"> Agree<br>
+  <input type="radio" name="q8_neuroticism" value="5"> Strongly Agree<br>
+</div>
+<br>
+<div class="question">
+  <label><b>9. I get upset easily. </b></label><br>
+  <input type="radio" name="q9_neuroticism" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q9_neuroticism" value="2"> Disagree<br>
+  <input type="radio" name="q9_neuroticism" value="3"> Neutral<br>
+  <input type="radio" name="q9_neuroticism" value="4"> Agree<br>
+  <input type="radio" name="q9_neuroticism" value="5"> Strongly Agree<br>
+</div>
+<br>
+<div class="question">
+  <label><b>10. I have frequent moood swings </b></label><br>
+  <input type="radio" name="q10_neuroticism" value="1" required> Strongly Disagree<br>
+  <input type="radio" name="q10_neuroticism" value="2"> Disagree<br>
+  <input type="radio" name="q10_neuroticism" value="3"> Neutral<br>
+  <input type="radio" name="q10_neuroticism" value="4"> Agree<br>
+  <input type="radio" name="q10_neuroticism" value="5"> Strongly Agree<br>
+</div>
+
+<br>
+<button type="submit" class="btn btn-primary"></button>
+
+          <!-- Questions will be appended here -->
+        </div>
+       <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition mt-6">Submit Quiz</button>
+      </form>
+      <div id="quiz-result" class="mt-4 hidden">
+        <h3 class="text-lg font-semibold">Your Personality Traits</h3>
+        <div id="trait-results" class="text-gray-600 dark:text-gray-300"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

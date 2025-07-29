@@ -1,0 +1,295 @@
+/* Define CSS variables for light and dark modes */
+:root {
+  --bg-color: #f3f4f6; /* Light mode background */
+  --text-color: #1f2937; /* Light mode text */
+  --card-bg: #ffffff; /* Light mode card background */
+  --button-bg: #f3f4f6; /* Light mode button background */
+  --icon-fill: #3b82f6; /* Light mode icon color */
+  --input-bg: #ffffff; /* Light mode input background */
+  --input-border: #d1d5db; /* Light mode input border */
+}
+
+.dark {
+  --bg-color: #0c1117; /* Dark mode background */
+  --text-color: #e5e7eb; /* Dark mode text */
+  --card-bg: #374151; /* Dark mode card background */
+  --button-bg: #4b5563; /* Dark mode button background */
+  --icon-fill: #93c5fd; /* Dark mode icon color */
+  --input-bg: #4b5563; /* Dark mode input background */
+  --input-border: #6b7280; /* Dark mode input border */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Chat message styles */
+.chat-message-user {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 1rem 1rem 0 1rem;
+  padding: 0.5rem 1rem;
+  max-width: 70%;
+  margin-left: auto;
+}
+
+.chat-message-bot {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  border-radius: 1rem 1rem 1rem 0;
+  padding: 0.5rem 1rem;
+  max-width: 70%;
+  margin-right: auto;
+}
+
+.dark .chat-message-bot {
+  background-color: #4b5563;
+  color: #e5e7eb;
+}
+
+/* Smooth transitions for cards */
+.card {
+  background-color: var(--card-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom scrollbar for chat */
+#chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.dark #chat-messages::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+/* Theme switch button */
+#theme-switch {
+  height: 36px;
+  width: auto;
+  padding: 0 8px;
+  border-radius: 9999px;
+  background-color: var(--button-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+#theme-switch svg {
+  fill: var(--icon-fill);
+  width: 24px;
+  height: 24px;
+}
+
+#theme-switch .sun-icon {
+  display: none;
+}
+
+.dark #theme-switch .moon-icon {
+  display: none;
+}
+
+.dark #theme-switch .sun-icon {
+  display: block;
+}
+
+/* Navbar styles */
+nav {
+  background-color: var(--card-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Quiz-specific styles */
+.question {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  display: none;
+}
+
+.question.active {
+  opacity: 1;
+  display: block;
+}
+
+.dark .question {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.question label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .radio-group {
+    flex-wrap: wrap;
+  }
+}
+
+.question input[type="radio"] {
+  display: none;
+}
+
+.question input[type="radio"] + label {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  border: 1px solid var(--input-border);
+  border-radius: 0.25rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  font-size: 0.9rem;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.question input[type="radio"]:checked + label {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.dark .question input[type="radio"]:checked + label {
+  background-color: #93c5fd;
+  border-color: #93c5fd;
+  color: #1f2937;
+}
+
+.question input[type="radio"]:hover + label {
+  background-color: #dbeafe;
+}
+
+.dark .question input[type="radio"]:hover + label {
+  background-color: #6b7280;
+}
+
+#quiz-result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark #quiz-result {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#trait-results .trait {
+  margin-bottom: 1rem;
+}
+
+#trait-results .trait h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+#trait-results .trait p {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.nav-buttons button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #3b82f6;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.nav-buttons button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.dark .nav-buttons button {
+  background-color: #93c5fd;
+  color: #1f2937;
+}
+
+.dark .nav-buttons button:disabled {
+  background-color: #6b7280;
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.dark input[type="text"]:focus,
+.dark input[type="email"]:focus,
+.dark input[type="password"]:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.3);
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.error-message.active {
+  display: block;
+}
